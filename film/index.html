@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png" alt=""></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Show</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search">
+            <i class="fa-solid fa-magnifying-glass fa-search"></i>
+
+        </div>
+    </header>
+    <div class="banner">
+        <!-- <p>dsagasdga</p> -->
+        <img src="bg.jpg" class="bg" alt="">
+        <div class="content">
+            <img src="name.png" class="moiveTitle" alt="">
+            <h4>
+                <span>2020</span>
+                <span><i>12+</i></span>
+                <span>1h 55min</span>
+                <span>Action</span>
+            </h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, officia expedita aliquid ipsum voluptas quibusdam consequatur voluptate accusantium molestias, dolorem quam odio molestiae quis. Nobis expedita temporibus eos magni modi
+                aut ea, ipsum adipisci laboriosam consectetur sint molestias neque odit amet nisi, animi explicabo cumque ad id obcaecati quos. Deserunt, eius corrupti? Sint mollitia nemo ipsam nesciunt porro quia voluptatibus laborum commodi. Dolores
+                tempore quos in.</p>
+            <div class="button">
+                <a href="#"><i class="fa-solid fa-play"></i>Play</a>
+                <a href="#"><i class="fa-solid fa-circle-plus"></i>My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="togglevideo()" href="#"><img src="play.png" alt="">Watch Trailer</a>
+    </div>
+    <div class="trailer">
+        <video src="video.mp4" controls="true"></video>
+        <img src="close.png" onclick="togglevideo2()" class="close" alt="">
+    </div>
+</body>
+<script>
+    function togglevideo() {
+        const trailer = document.querySelector(".trailer");
+        const video = document.querySelector("video")
+        trailer.classList.toggle('active')
+        video.currentTime = 0;
+        video.play();
+
+        // video.pause();
+    }
+
+    function togglevideo2() {
+        const trailer = document.querySelector(".trailer");
+        const video = document.querySelector("video")
+        trailer.classList.toggle('active')
+        video.currentTime = 0;
+        // video.play();
+
+        video.pause();
+    }
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click Me</button>
+
+    <h1 style="color: red;"> Chao ngay moi tot lanh</h1>
+    <button id="btn" onclick="history.back()">Tro lai</button>
+    <script type="text/javascript">
+        var btn = document.getElementsByTagName("button");
+        console.log("mang", btn);
+        btn[0].onclick = function foo() {
+            alert("hello");
+        }
+    </script>
+    <script type="text/javascript">
+        var a = "hoan";
+        var b = "le";
+        console.log(`toi la: ${a} ${b}`);
+    </script>
+</body>
+
+</html>

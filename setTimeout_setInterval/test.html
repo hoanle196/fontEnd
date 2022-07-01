@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	.thongbao
+	{
+		width: 600px;margin: 50px auto;border: 2px solid black; font-size: 20px; text-align: center;
+	}
+</style>
+<body>
+	<div class="thongbao">
+		<h3>Cảm ơn Quý Khách đã sử dụng dịch vụ !</h3>
+		<p>Quay lại trong <span id="sogiay">10</span> giây</p>
+	</div>
+	<script type="text/javascript">
+		var dem= 10;
+		setInterval(demgiamdan,1000);
+		 function demgiamdan()
+		 {
+			dem--;
+			if(dem>0)
+			{
+				document.querySelector('#sogiay').innerHTML=dem;
+			}
+			else
+			{
+				window.location="index.html";
+				// return;
+			}
+		 	
+			
+		 	
+		 }
+		
+	</script>
+	<script>
+		
+	</script>
+</body>
+</html>

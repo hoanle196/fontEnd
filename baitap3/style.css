@@ -1,0 +1,162 @@
+:root
+{
+	--column:3;
+}
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	background: #f5f5f5;
+}
+.an{
+	visibility: hidden;
+}
+.hien
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 960px;
+	height: auto;
+	margin: 0px auto;
+	background: #f5f5f5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin-top: 20px;
+}
+.container
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 960px;
+	height: auto;
+	margin: 0px auto;
+	background: #f5f5f5;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin-top: 20px;
+}
+p span
+{
+	font-weight: bold;
+	color: black;
+}
+i {
+	color: green;
+	margin-right: 10px;
+	font-weight: bold;
+	font-size: 18px;
+}
+p
+{
+	font-size: 14px;
+	color: #6b6363;
+}
+.btn-buy
+{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	height: 45px;
+	margin-bottom: 15px;
+
+}
+.btn-buy .btn-1
+{
+	display: flex;
+	justify-content: space-between;
+	width: 190px;
+	align-items: center;
+	outline: none;
+	border: 1px solid #f5f5f5;
+	background: none;
+}
+.btn-buy .btn-1 p
+{
+	text-align: left;
+	margin-left: 10px;
+}
+.btn-buy .btn-2
+{
+	background: #55A742;
+	font-weight: bold;
+	padding: 0px 15px;
+	color: #fff;
+	/*outline: none;*/
+	border: none;
+	position: relative;
+	cursor: pointer;
+  	 border-bottom: 4px solid #417236;
+	transition: all 0.3s ease-in-out; 
+}
+.btn-buy .btn-2:after
+{
+	/*code nay khong chay thay xem cho e voi*/
+	content: "";
+	width: 100%;
+	height: 4px;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	background: #417236;
+}
+.btn-buy .btn-2:hover
+{
+	background: #417236;
+}
+.btn-buy i
+{
+	color: orange;
+	margin-left: 15px;
+
+}
+h1
+{
+	border-bottom: 1px dotted black;
+	color: #3B88C8;
+	padding: 10px;
+}
+h3
+{
+	color: #EB6565;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+.card
+{
+	 flex-basis: calc(100% / var(--column));
+	 background-color: #fff;
+	 padding: 15px;
+	 box-sizing: border-box;
+	 margin-left: -30px;
+   	 margin-bottom: 20px;
+  	 border-radius: 5px;
+  	 position: relative;
+  	 transition: all 0.25s ease-in-out;
+}
+.card:hover
+{
+	    box-shadow: 0px 1px 8px 7px grey;
+}
+.card:after
+{
+	content: "";
+	width: 40%;
+	height: 4px;
+	background: #EB6565;
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+ul.menu
+{
+	list-style: none;
+}
+ul.menu li
+{
+	margin-bottom: 15px;
+}
