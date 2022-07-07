@@ -1,0 +1,97 @@
+<!-- <button onclick="abc()">Gán thuộc tính</button> -->
+<!-- <button type="checkbox" onclick="abc()">Gan thuoc tinh</button> -->
+<input type="checkbox" onclick="abc()">
+<hr>
+<input value="OK"> <br>
+<button id="hoan" onclick="alert('Chúc an lành')" disabled>Xử lý </button><br>
+<a href="http://google.com" id="tlw">Link</a><br>
+<img src="https://longnv.name.vn/wp-content/uploads/2020/03/tong-quan-ve-javascript.png">
+<script>
+    function abc() {
+        document.getElementsByTagName("INPUT")[1].setAttribute("type", "button");
+        document.getElementById("tlw").setAttribute("href", "https://longnv.name.vn");
+        document.getElementsByTagName("img")[0].setAttribute("width", "200px");
+        var n = document.getElementById("hoan");
+        console.log(n);
+
+        n.disabled = !n.disabled;
+
+        document.getElementById("hoan").style.border = "1px solid red";
+        document.getElementById("hoan").style.borderRadius = "5px";
+    }
+</script>
+<style>
+    #tbl {
+        width: 4ppx;
+        margin: auto;
+        border-collapse: collapse;
+    }
+    
+    #tbl td {
+        border: 1px solid darkblue;
+        padding: 4px;
+    }
+    
+    h2,
+    h3 {
+        text-align: center;
+    }
+</style>
+<h2>Thực tập : Chỉnh định dạng đối tượng</h2>
+<table id="tbl">
+    <tr id="dong1">
+        <td>Dòng 1 - ô 1 </td>
+        <td><span>Dòng 1 - <b>ô 2</b> </span></td>
+        <td>Dòng 1 - ô 3 </td>
+    </tr>
+    <tr id="dong2">
+        <td>Dòng 2 - ô 1 </td>
+        <td>Dòng 2 - ô 2 </td>
+        <td>Dòng 2 - ô 3 </td>
+    </tr>
+</table>
+<h3>
+    <button onclick="an()">Ẩn</button>
+    <button onclick="hien()">Hien</button>
+    <button onclick="chinhmaunen()">Chỉnh màu nền</button>
+    <button onclick="chuhoa()">Cột cuối chữ hoa</button>
+</h3>
+<script>
+    function chuhoa() {
+        tr_arr = document.getElementsByTagName("tr");
+        for (var i = 0; i < tr_arr.length; i++) {
+            var str = tr_arr[i].children[2].innerText.toUpperCase();
+            tr_arr[i].children[2].innerHTML = `<b>${str}</b>`;
+            // console.log(str);
+        }
+    }
+
+    function chinhmaunen() {
+        mau = prompt("Nhập màu");
+        obj = document.getElementById("tbl");
+        obj.style.backgroundColor = mau;
+    }
+
+    function hien() {
+        obj = document.getElementById("tbl");
+        obj.style.visibility = "";
+    }
+
+    function an() {
+        obj = document.getElementById("tbl");
+        obj.style.visibility = "hidden";
+    }
+
+    function testchildren() {
+        var obj = document.getElementById("dong1");
+        var socon = obj.children.length;
+        console.log("Số con " + socon);
+        var str = obj.children[1].innerHTML;
+        console.log("Mã trong ô thứ 2 : " + str);
+        var text = obj.children[1].innerText;
+        console.log("Mã trong ô thứ 2 : " + text);
+    }
+</script>
+<script>
+    testchildren();
+</script>
